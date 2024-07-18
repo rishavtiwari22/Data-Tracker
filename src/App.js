@@ -4,11 +4,12 @@ function App() {
   function Submit(e) {
     e.preventDefault();
     const form = e.target;
+    console.log(form);
     const formdata = new FormData(form);
     
 
     fetch(
-      "https://script.google.com/macros/s/AKfycby1XeaDKGAA7bap5vZby3Jt3HGfpXDgQozUFn-1mFUr-uF5cU_b2a6L36SM8RSy15fa/exec",
+      "https://script.google.com/macros/s/AKfycbwDEbhY-sRVH1KJUoOo1cRUHLpxLmUX41oxmpjbECDhclFK5LNg7wim9O_vLCua91zD/exec",
       {
         method: "POST",
         body: formdata,
@@ -32,41 +33,41 @@ function App() {
       });
   }
 
+  const sheetval = () => {
+    let sheeturl = "https://docs.google.com/spreadsheets/d/1ulq4B2DLJMCnToNkjqutXgSDg9ro6-3ZtMd_TNQel6Y/edit?gid=0#gid=0";
+    window.open(sheeturl);
+  }
+
   return (
+    
     <div className="App">
-      <div className="form-container">
-        <h1>Registration Form</h1>
+
+      <div className="component">
+        <h1 className="Heading">Registration Form</h1>
         <form className="form" onSubmit={Submit}>
-          <input
-            className="input-field"
-            name="Name"
-            type="text"
-            placeholder="Enter your name"
-            required
-          />
-          <input
-            className="input-field"
-            name="Email"
-            type="email"
-            placeholder="Enter your email"
-            required
-          />
-          <input
-            className="input-field"
-            name="Phone"
-            type="tel"
-            placeholder="Enter your Phone Number"
-            required
-          />
-          <button className="submit-button" type="submit">
-            Submit
-          </button>
-          <div className="footer">
-            <p>&copy; 2024 Rishav Tiwari. All rights reserved.</p>
+          <div className="one bhai">
+            <input type="text" className="name" name="Name" placeholder="Name" required />
+            <input type="email" className="email" name="Email" placeholder="Email" required />
+          </div>
+          <br />
+          <div className="two bhai">
+            <input type="Number" className="phone" name="Phone" placeholder="Phone" required />
+            <input type="text" className="campus" name="Campus" placeholder="Campus" required />
+          </div>
+          <br />
+          <div className="three bhai">
+            <input type="text" className="school" name="School" placeholder="School" required />
+            <input type="text" className="education" name="Education" placeholder="Last Education" required />
+          </div>
+          <br />
+          <div className="button bhai">
+            <button className="btn1" type="submit">Submit</button>
+            <button className="btn2" type="click" onClick={sheetval}>Check Data</button>
           </div>
         </form>
       </div>
     </div>
+    
   );
 }
 
