@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Data-Tracker/static/css/main.f4600a26.css",
+    "main.js": "/Data-Tracker/static/js/main.a04d1331.js",
+    "static/js/453.8a4d292c.chunk.js": "/Data-Tracker/static/js/453.8a4d292c.chunk.js",
+    "index.html": "/Data-Tracker/index.html",
+    "main.f4600a26.css.map": "/Data-Tracker/static/css/main.f4600a26.css.map",
+    "main.a04d1331.js.map": "/Data-Tracker/static/js/main.a04d1331.js.map",
+    "453.8a4d292c.chunk.js.map": "/Data-Tracker/static/js/453.8a4d292c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f4600a26.css",
+    "static/js/main.a04d1331.js"
+  ]
+}
